@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import './components/header/style.module.scss';
+@import './components/footer/style.scss';
+@import './components/spinner/style.scss';
+
+
+body {
+  background-color: #FFFFFF;
+  font-family     : Roboto;
+  margin          : 0;
+  padding         : 0;
+}
+
+.errorText {
+  color: red;
+}

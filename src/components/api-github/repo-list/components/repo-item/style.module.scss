@@ -1,0 +1,42 @@
+.spanSpace {
+    margin-bottom: 10px;
+}
+
+.button {
+    color      : #6c0eb3 !important;
+    border     : 1px solid #6f2fa380;
+    display    : flex;
+    align-items: flex-end;
+}
+
+.repoItemContainer {
+    display        : flex;
+    flex-direction : column;
+    padding        : 10px;
+    width          : 27%;
+    background     : #fff;
+    height         : 145px;
+    padding        : 20px;
+    margin         : 10px;
+    border-radius  : 5px;
+    box-shadow     : 3px 3px 10px #ddd;
+    text-decoration: none;
+}
+
+.repoItemContainer>span {
+    font: {
+        size  : 14px;
+        weight: normal;
+    }
+
+    color: #000;
+}
+
+.repoItemContainer>span:first-child {
+    font: {
+        size  : 18px;
+        weight: bold;
+    }
+
+    margin-bottom: 8px;
+}
