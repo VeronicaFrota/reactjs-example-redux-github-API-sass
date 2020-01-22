@@ -4,9 +4,16 @@
 
 .button {
     color      : #6c0eb3 !important;
-    border     : 1px solid #6f2fa380;
+    border     : 1px solid #6f2fa380 !important;
     display    : flex;
     align-items: flex-end;
+    transition : 1s;
+
+    &:hover {
+        color     : #ffffff !important;
+        background: #bc1ec7 !important;
+        transition: 1s;
+    }
 }
 
 .repoItemContainer {

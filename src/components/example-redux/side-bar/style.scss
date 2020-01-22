@@ -1,8 +1,46 @@
 .button {
-    background: #bc1ec7 !important;
+    background: #382e2e !important;
 
+    &:hover {
+        color: #60d9fa;
+    }
+
+    margin: 0px 0px 10px 20px !important;
 }
 
-.button:hover {
-    color: #000000;
+.moduleItems, .moduleLessons, .moduleStrong, .moduleTitleLesson {
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.moduleItems, .moduleStrong { 
+    justify-content: center;
+}
+
+.moduleLessons, .moduleTitleLesson {
+    align-items: center;
+}
+
+.moduleItems {
+    border-top: 1px solid #cccccc;
+    margin: 20px 40px 0px 40px;
+}
+
+.moduleLessons {
+    justify-content: flex-end;
+}
+
+.moduleStrong {
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import VideoAula from '../example-redux/video-aula/videoAula'
+import VideoAula from '../example-redux/video-aula/videoAula';
 import SideBar from '../example-redux/side-bar/sideBar';
-import { Provider } from 'react-redux'
-import store from '../example-redux/store/store'
+import { Provider } from 'react-redux';
+import store from '../example-redux/store/store';
 
 class ExempleRedux extends Component {
     render() {

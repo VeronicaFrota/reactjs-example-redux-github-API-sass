@@ -9,7 +9,7 @@ const RepoItem = ({ repo }) => (
         <span>Fork: {repo.forks}</span>
         <span className={styles.spanSpace}>Issues: {repo.open_issues}</span>
 
-        <Button variant="outlined" color="primary" href={repo.html_url} target="_blank" className={styles.button}>
+        <Button variant="outlined" href={repo.html_url} target="_blank" className={styles.button}>
             Visualizar
         </Button>
     </a>

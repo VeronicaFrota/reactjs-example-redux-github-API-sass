@@ -11,18 +11,20 @@ import * as CourseActions from '../../example-redux/store/actions/courseAction';
 */
 const SideBar = ({ modules, toggleLesson }) => {
     return (
-        <aside>
+        <aside className="moduleItems">
             {modules.map(module => (
                 <div key={module.id}>
-                    <strong>
-                        {module.title}
+                    <strong className="moduleStrong">
+                        {module.id} - {module.title}
                     </strong>
                     <ul>
                         {module.lessons.map(lesson => (
-                            <li key={lesson.id}>
-                                {lesson.title}
+                            <li key={lesson.id} className="moduleLessons">
+                                <div className="moduleTitleLesson">
+                                    {lesson.title}
+                                </div>
                                 <Button variant="outlined" color="secondary" className="button"
-                                    onClick={() => toggleLesson(module, lesson)}> {/* Define uma lesson ativa */}   
+                                    onClick={() => toggleLesson(module, lesson)}> {/* Define uma lesson ativa */}
                                     Selecionar
                                 </Button>
                             </li>
@@ -40,7 +42,7 @@ const mapStateToProps = state => ({
 });
 
 /* bindActionCreators pega o objeto importado do CourseActions e mapea em forma de propriedades */
-const mapDispatchToProps = dispatch => 
+const mapDispatchToProps = dispatch =>
     bindActionCreators(CourseActions, dispatch);
 
 /* 

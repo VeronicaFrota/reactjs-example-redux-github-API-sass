@@ -1,43 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import ApiGitHub from '../api-github/apiGithub';
-import ExempleRedux from '../example-redux/exempleRedux'
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
-import { isAuthenticaded } from '../../auth'
-
-// Acessa a rota somente se estiver autenticado
-const PrivateRoute = ({ component: Component, ...rest }) => (
-    <Route {...rest} render={props => (
-            /* Se autenticação ok, então reinderiza o componente para ser exibido, se não, redireciona para a página inicial sem perder o hostórico de navegação */
-            isAuthenticaded() ? <Component {...props} /> : (<Redirect to={{ pathname: '/', state: { from: props.location } }} />)
-        )}
-    />
-)
+import { NavLink } from 'react-router-dom';
 
 const Header = (props) => (
-    <BrowserRouter>                                              {/* Para trabalhar com o navigate state do browser, manipula as URL's */}
-        <div className="menu">
-            <div className="menuLogo">
-                <a href="#">Logo</a>
-            </div>
-            <nav className="menuNav">
-                <ul>
-                    <Link to="/" className="menuNavLink">
-                        <li>API GitHub</li>
-                    </Link>
-                    <Link to="/exemple-redux" className="menuNavLink">
-                        <li>Redux</li>
-                    </Link>
-                </ul>
-            </nav>
+    <div className="menu">
+        <div className="menuLogo">
+            <a href="#">Logo</a>
         </div>
-
-        <Switch>                                                     {/* Não deixa mais de uma rota ser aberta, abrindo somente uma rota */}
-            <Route exact path="/" component={ApiGitHub} />
-            <PrivateRoute path="/exemple-redux" component={ExempleRedux} />
-        </Switch>
-
-    </BrowserRouter>
+        <nav className="menuNav">
+            <ul>
+                <NavLink to="/" activeStyle={{ color:'#ff0080' }} className="menuNavLink">
+                    <li>API GitHub</li>
+                </NavLink>
+                <NavLink to="/exemple-redux" activeStyle={{ color:'#ff0080' }} className="menuNavLink">
+                    <li>Redux</li>
+                </NavLink>
+            </ul>
+        </nav>
+    </div>
 )
 
 export default Header;

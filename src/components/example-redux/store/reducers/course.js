@@ -29,6 +29,34 @@ const INITIAL_STATE = {
                     title: "Quarta Aula"
                 }
             ]
+        },
+        {
+            id: 3,
+            title: "Aprendendo Hooks",
+            lessons: [
+                {
+                    id: 5,
+                    title: "Quarta Aula"
+                },
+                {
+                    id: 6,
+                    title: "Quinta Aula"
+                }
+            ]
+        },
+        {
+            id: 4,
+            title: "Consumindo API",
+            lessons: [
+                {
+                    id: 7,
+                    title: "Sexta Aula"
+                },
+                {
+                    id: 8,
+                    title: "Sétima Aula"
+                }
+            ]
         }
     ]
 };

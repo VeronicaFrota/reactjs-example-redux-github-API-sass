@@ -1,12 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import './style.scss'
 
 const VideoAula = ({ activeModule, activeLesson }) => {
     return (
-        <div>
-            <strong>Módulo: {activeModule.title ? activeModule.title : 'Selecione o Módulo'}</strong>
+        <div className="ModuleLessonsItems">
+            <strong>
+                Módulo: {activeModule.title ? activeModule.title : 'Selecione um módulo '}
+            </strong>
             <br />
-            <span>Aula: {activeLesson.title ? activeLesson.title : 'Selecione uma Aula'}</span>
+            <span>
+                <strong>Aula: </strong>
+                {activeLesson.title ? activeLesson.title : 'Selecione uma Aula '}
+            </span>
             <br />
         </div>
     );
@@ -19,16 +25,3 @@ export default connect(state => (
         activeLesson: state.course.activeLesson
     }
 ))(VideoAula);
-
-
-/* import React from 'react';
-
-const videoAula = () => {
-    return (
-        <div>
-
-        </div>
-    );
-};
-
-export default videoAula; */
